@@ -1,0 +1,35 @@
+Név:
+Pöltl Zorka
+
+A weboldal URL címe:
+https://<a-te-github-felhasznaloneved>.github.io/<repo-neve>/
+
+A projekt témája:
+A weboldal egy utazástervező honlap, amely népszerű európai városok bemutatását és egy interaktív útiterv-generálást kínál a felhasználóknak. A cél egy modern, reszponzív, felhasználóbarát oldal készítése HTML, CSS és JavaScript használatával.
+
+Saját JavaScript kód:
+A projektben két külön JavaScript fájlt használok.
+
+1) pt.js  
+   – Ez végzi az űrlap mezőinek kliensoldali validálását.  
+   – A hibákat dinamikusan kezeli: kiírja az üzeneteket, jelöli a hibás mezőket, és megakadályozza a beküldést, ha az adatok érvénytelenek.  
+   – A validálás teljesen natív JavaScript használatával készült.
+
+2) itinerary.js  
+   – Ez felel az interaktív útiterv generálásáért.  
+   – Az űrlapból érkező URL paramétereket feldolgozza, kiszámítja az utazás hosszát, kiválasztja a megfelelő programlistát (város + stílus szerint), majd dinamikusan létrehozza a napi programkártyákat.  
+   – A kód teljes egészében saját fejlesztésű, natív DOM-manipulációval.
+
+Használt egyedi font:
+A weboldalon a Google Fonts „Poppins” betűtípusát használom.  
+Forrás: https://fonts.google.com/specimen/Poppins  
+A betöltés a style.css fájl elején történik @import segítségével.
+
+Favicon:
+A favicon a /images/ ikon.jpg fájlban található, és minden HTML oldal head szekciójában be van hivatkozva.
+
+Felhasznált külső források:
+– Nem használtam külső JavaScript könyvtárat.  
+– A HTML, CSS és JavaScript kód saját munkám, azonban az implementálás során igénybe vettem mesterséges intelligencia alapú segítséget (pl. ChatGPT) egyes részek finomhangolásához és hibakereséséhez. A kód működését teljes mértékben értem és önállóan is el tudom magyarázni.
+– A városok leírásai és programlistái részben saját szövegezésűek, részben mesterséges intelligencia által generált tartalmak, amelyeket én szerkesztettem, alakítottam és illesztettem a weboldal témájához.
+

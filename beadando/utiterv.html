@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pöltl Zorka">
+    <meta name="description" content="Automatikusan generált útiterv az előzőleg kitöltött űrlap alapján.">
+    <title>PlanYourTrip – Útiterv</title>
+
+    <link rel="icon" type="image/jpeg" href="images/ikon.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">PlanYourTrip</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="uticelok.html">Úticélok</a></li>
+                <li><a href="tervezo.html">Utazástervező</a></li>
+                <li><a href="utiterv.html" class="active">Útiterv</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>A te útiterved</h1>
+            <p>Az alábbi útitervet a megadott adataid alapján generáltuk.</p>
+        </section>
+
+        <!-- Összefoglaló blokk – ezt tölti ki a JS -->
+        <section class="trip-summary">
+            <p class="trip-destination" id="trip-destination"></p>
+            <p><strong>Indulás:</strong> <span id="sum-start"></span></p>
+            <p><strong>Érkezés:</strong> <span id="sum-end"></span></p>
+            <p><strong>Utazás hossza:</strong> <span id="sum-days"></span></p>
+            <p><strong>Költségkeret:</strong> <span id="sum-budget"></span></p>
+        </section>
+
+
+        <!-- Ide generálja a JS a napi kártyákat -->
+        <section id="itinerary-container" class="itinerary-grid">
+            <!-- A JS (itinerary.js) tölti fel napi bontású kártyákkal -->
+        </section>
+
+        <section class="contact-box">
+            <p>A részletesebb ájanlatot hamarosan küldjük a megadott címre.</p>
+            <p><strong>Ügyfélszolgálat:</strong></p>
+            <p>E-mail: <span>planyourtrip@gmail.com</span></p>
+            <p>Telefon: +36 30 123 4567</p>
+        </section>
+
+        <section class="back-link">
+            <a href="tervezo.html" class="btn-secondary">Vissza az űrlaphoz</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PlanYourTrip – Pöltl Zorka</p>
+    </footer>
+
+    <!-- JS az útiterv generálásához -->
+    <script src="itinerary.js" defer></script> 
+</body>
+</html>

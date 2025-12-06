@@ -1,0 +1,569 @@
+/* ===== Google Fonts import ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===== Alap beállítások ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f3f4f6;
+    color: #222;
+}
+
+/* Linkek */
+
+a {
+    color: #eb254d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Oldal szélesség, általános szekciók */
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+/* ===== Navigáció + header ===== */
+
+header {
+    background-color: #0f172a; 
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+}
+
+.main-nav {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #f9fafb;
+    letter-spacing: 0.05em;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;   
+}
+
+.main-nav li {
+    margin-left: auto;
+}
+
+.main-nav a {
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: #f9fafb;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: #eb254d;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ===== Gombok ===== */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #eb254d;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #85031d;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+/* ===== Hero (index) ===== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.hero-text p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    color: #4b5563;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+/* ===== Funkciók (index) ===== */
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #111827;
+}
+
+.feature-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+/* ===== Oldal fejlécek (page-header) ===== */
+
+.page-header {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.page-header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.page-header p {
+    color: #4b5563;
+}
+
+/* ===== Úticélok (destinations) ===== */
+
+.destinations-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ÚTICÉL KÁRTYÁK KATTINTHATÓ + HOVER EFFEKT + SCALE */
+
+.destination-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.destination-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
+
+.destination-card a:hover {
+    text-decoration: none;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 1rem 1.1rem 1.2rem 1.1rem;
+}
+
+.destination-content h2 {
+    margin-bottom: 0.4rem;
+    font-size: 1.25rem;
+}
+
+.destination-content p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+/* ===== Form (planner) ===== */
+
+.form-section {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1.3rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%; 
+}
+
+#travel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #111827;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.6rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #f9fafb;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* Radio csoport */
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.radio-group label {
+    font-weight: 400;
+}
+
+/* ===== CHECKBOX STÍLUS – BALRA IGAZÍTVA, KOMPAKT ===== */
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+
+
+/* Hibaüzenetek */
+
+.error-message {
+    font-size: 0.8rem;
+    color: #b91c1c;
+    min-height: 1em;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.input-error {
+    border: 2px solid #b91c1c !important;
+    background-color: #fff5f5;
+}
+
+
+
+/* ===== Útiterv oldal (itinerary) ===== */
+
+.trip-summary {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.07);
+}
+
+.trip-summary p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.trip-summary strong {
+    color: #111827;
+}
+
+.trip-summary .trip-destination {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #eb254d;
+    margin-bottom: 0.75rem;
+}
+
+.itinerary-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Napi sor – egyszerűbb, letisztultabb stílus */
+.day-card {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #eb254d;
+}
+
+/* Nap címsor*/
+.day-card h2 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: black;
+    margin-bottom: 0.25rem;
+}
+
+/* Program szöveg */
+.day-card p {
+    font-size: 0.97rem;
+    color: #111827;
+    margin: 0;
+}
+
+.back-link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-box {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 1.2rem 1.4rem;
+    border-radius: 0.9rem;
+    margin-top: 2rem;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.07);
+}
+
+.contact-box p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.4rem;
+}
+
+.contact-box span {
+    color: #eb254d;
+    font-weight: 600;
+}
+
+
+
+/* ===== Úticél részletes oldal ===== */
+
+.destination-detail {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1.3rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.destination-detail img {
+    width: 50%;
+    height: 100%; 
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 0.9rem;
+}
+
+.destination-detail-main h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.destination-detail-main p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.destination-programs h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: #111827;
+}
+
+.destination-programs ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+}
+
+.destination-programs li {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.destination-back {
+    margin-top: 1.5rem;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ffffff;
+    background-color: #0f172a;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ===== Reszponzivitás ===== */
+
+/* Tablet / kisebb laptop */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .features .feature-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .itinerary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .destination-detail {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .destination-detail img {
+        flex: 1;
+    }
+
+    .destination-detail-content {
+        flex: 1;
+    }
+}

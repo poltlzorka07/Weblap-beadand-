@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pöltl Zorka">
+    <meta name="description" content="Egyszerű utazástervező weboldal, amely segít megtervezni a következő utazásodat.">
+    <!--Ez a weboldal rövid, 1–2 mondatos leírása a böngészők és keresők számára-->
+    
+    <title>PlanYourTrip – Kezdőlap</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/ikon.jpg">
+
+    <!-- Saját CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">PlanYourTrip</a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Kezdőlap</a></li>
+                <li><a href="uticelok.html">Úticélok</a></li>
+                <li><a href="tervezo.html">Utazástervező</a></li>
+                <li><a href="utiterv.html">Útiterv</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero szekció -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Tervezd meg a következő utazásodat egyszerűen!</h1>
+                <p>
+                    A PlanYourTrip egy egyszerű, kezdőknek szánt útiterv-generátor,
+                    amellyel néhány adat megadása után napi bontású programot kapsz.
+                </p>
+                <a href="tervezo.html" class="btn-primary">Kezdd el a tervezést</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/travelplanner.jpg" alt="Utazás illusztráció">
+            </div>
+        </section>
+
+        <!-- Funkciók / előnyök szekció -->
+        <section class="features">
+            <h2>Mit tud a PlanYourTrip?</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Úticélok felfedezése</h3>
+                    <p>Válogass néhány népszerű város közül, és kapj rövid áttekintést róluk.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Napi útiterv generálása</h3>
+                    <p>Az utazás hossza alapján automatikusan generált napi programjavaslatok.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Egyszerű használat</h3>
+                    <p>Nincs szükség regisztrációra vagy bonyolult beállításokra – csak töltsd ki az űrlapot!</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PlanYourTrip – Pöltl Zorka.</p>
+    </footer>
+    <script src="pt.js" defer></script> 
+</body>
+</html>
